@@ -1,0 +1,25 @@
+<launch>
+
+
+<node name="infer_speed" pkg="v_estimate" type="infer_speed.py" output="screen">
+</node>
+
+<node name="filter_speed" pkg="v_estimate" type="filter_speed.py" output="screen">
+</node>
+
+<node name="logger" pkg="v_estimate" type="logger.py" output="screen">
+</node>
+ 
+
+<node name="replay_data" pkg="v_estimate" type="publish_old_data.py" output="screen">
+</node>
+
+
+<node name="gps" pkg="v_estimate" type="gps_publisher.py" output="screen">
+</node>
+
+<node name="lcd" pkg="v_estimate" type="lcd_display.py" output="screen">
+</node>
+
+
+</launch>
